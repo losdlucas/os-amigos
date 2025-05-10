@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Moderno</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-js"></div>
+  <div class="container">
+    <div class="form-container">
+      <form class="login-form">
+        <h2>Bem-vindo de volta!</h2>
+        <p>Entre com seus dados para continuar</p>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <div class="input-wrapper">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" required />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Senha</label>
+          <div class="input-wrapper">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" required />
+            <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+          </div>
+        </div>
+
+        <button type="submit">Entrar</button>
+
+        <div class="footer">
+          <a href="#" id="forgotPasswordLink">Esqueceu a senha?</a>
+          <span>•</span>
+          <a href="#" id="createAccountLink">Criar conta</a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Modal Esqueci a Senha -->
+    <div class="modal" id="forgotPasswordModal">
+      <div class="modal-content">
+        <h3>Recuperar Senha</h3>
+        <input type="password" id="newPasswordInput" placeholder="Nova senha">
+        <input type="password" id="confirmPasswordInput" placeholder="Confirmar senha">
+        <button id="submitNewPassword">Alterar Senha</button>
+        <p id="passwordResetMsg"></p>
+        <button class="close-btn" onclick="toggleModal('forgotPasswordModal')">Fechar</button>
+      </div>
+    </div>
+
+    <!-- Modal Criar Conta -->
+    <div class="modal" id="createAccountModal">
+      <div class="modal-content">
+        <h3>Criar Conta</h3>
+        <input type="text" id="fullName" placeholder="Nome completo">
+        <input type="email" id="newEmail" placeholder="Email">
+        <input type="password" id="newUserPassword" placeholder="Senha">
+        <input type="password" id="confirmNewUserPassword" placeholder="Confirmar senha">
+        <label class="checkbox">
+          <input type="checkbox" id="acceptTerms"> Aceito os termos
+        </label>
+        <button id="submitCreateAccount">Criar Conta</button>
+        <p id="accountMsg"></p>
+        <button class="close-btn" onclick="toggleModal('createAccountModal')">Fechar</button>
+      </div>
+    </div>
+  </div>
+  <script src="particles.min.js"></script>
+</body>
+</html>
