@@ -11,8 +11,11 @@
 <body>
   <div class="top-bar"></div>
 
-</div>
-
+  <main class="grid-container">
+    <h1>Meus Amigos</h1>
+    <div class="photo-grid">
+      <!-- 11 blocos para amigos -->
+      <div class="friend-box">
         <img src="leo.png" alt="Amigo 1">
         <p>leozinho</p>
       </div>
@@ -63,8 +66,14 @@
 <!-- Botão "OCULTOS" -->
 <button id="ocultos-btn">OCULTOS</button>
 
-
-
+<!-- Modal com pergunta -->
+<div id="pergunta-modal" class="hidden">
+  <div class="modal-content">
+    <p id="pergunta-texto"></p>
+    <input type="text" id="resposta" placeholder="Digite sua resposta">
+    <button id="responder-btn">Responder</button>
+  </div>
+</div>
 
 
 </body>
