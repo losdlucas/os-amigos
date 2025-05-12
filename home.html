@@ -74,6 +74,35 @@
     <button id="responder-btn">Responder</button>
   </div>
 </div>
+<script>
+  const perguntas = [
+    "Qual é a sua maior lembrança com seus amigos?",
+    "Quem é o mais engraçado da turma?",
+    "Qual foi a maior loucura que vocês já fizeram juntos?",
+    "Quem some e reaparece do nada?",
+    "Qual rolê foi inesquecível?",
+    "Quem é o mais provável de virar meme?",
+    "Qual música define o grupo?"
+  ];
+
+  const ocultosBtn = document.getElementById('ocultos-btn');
+  const perguntaModal = document.getElementById('pergunta-modal');
+  const perguntaTexto = document.getElementById('pergunta-texto');
+  const responderBtn = document.getElementById('responder-btn');
+
+  ocultosBtn.addEventListener('click', () => {
+    const perguntaAleatoria = perguntas[Math.floor(Math.random() * perguntas.length)];
+    perguntaTexto.textContent = perguntaAleatoria;
+    perguntaModal.classList.remove('hidden');
+  });
+
+  responderBtn.addEventListener('click', () => {
+    const resposta = document.getElementById('resposta').value.trim();
+    if (resposta !== "") {
+      window.location.href = "ocultos.html"; // redireciona para a página com vídeos e fotos
+    }
+  });
+</script>
 
 </body>
 </html>
